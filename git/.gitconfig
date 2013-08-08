@@ -1,0 +1,9 @@
+[user]
+	name = Yuri Elizarov
+	email = yuri.elizarov@gmail.com
+[merge]
+    tool = meld
+[color]
+    ui = true
+[init]
+    templatedir = ~/.gittemplate/

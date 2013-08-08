@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/yura/work/wave/wave-vagrant/src/receipts/requirements'
+let g:netrw_dirhist_2='/home/yura/work/wave/wave-vagrant/src/receipts/receipts/apps/ocr/receipt_bank/migrations'
+let g:netrw_dirhist_3='/home/yura/work/wave/wave-vagrant/src/receipts/receipts/apps'
+let g:netrw_dirhist_4='/home/yura/work/wave/wave-vagrant/src/accounting/waveaccounting/wave_api'
+let g:netrw_dirhist_5='/home/yura/work/wave/wave-vagrant/src/identity/identity/apps/wave_auth'
+let g:netrw_dirhist_6='/home/yura/work/dotfiles/vim'

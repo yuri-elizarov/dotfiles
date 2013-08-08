@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+cd ./$(git rev-parse --show-cdup)
+trap "rm -f tags.$$" EXIT
+ctags --tag-relative -Rftags.$$ --exclude=.git --languages=Python
+mv tags.$$ tags

@@ -1,0 +1,17 @@
+#!/bin/bash 
+
+set -e
+
+PWLENGTH=$1
+
+[[ -z $PWLENGTH ]] && PWLENGTH=4 
+
+NUMPW=$2
+
+[[ -z $NUMPW ]] && NUMPW=1
+
+for (( i=1; i<=$NUMPW; i++ ))
+do
+    PW=$(/usr/local/bin/gshuf -n $PWLENGTH /usr/share/dict/words | tr '\n' '-')
+    echo $PW | sed  's/^\(.*\).$/\1/'
+done

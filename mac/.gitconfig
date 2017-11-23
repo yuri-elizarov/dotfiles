@@ -1,0 +1,35 @@
+[user]
+	name = Yuri Elizarov
+	email = yuri.elizarov@gmail.com
+[core]
+	excludesfile = /Users/yuri/.gitignore_global
+    editor = nano
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+    ui = true
+[merge]
+	tool = p4merge
+[push]
+	default = simple
+[init]
+    templatedir = ~/.gittemplate/
+[diff]
+	tool = p4merge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
+[mergetool "p4merge"]
+    cmd = "/Applications/p4merge.app/Contents/Resources/launchp4merge \"$PWD/$BASE\" \"$PWD/$LOCAL\" \"$PWD/$REMOTE\" \"$PWD/$MERGED\""
+    trustExitCode = false
+    keepBackup = false
+#[difftool "p4merge"]
+#    cmd = "/Applications/p4merge.app/Contents/Resources/launchp4merge \"$LOCAL\" \"$REMOTE\""
+[credential]
+	helper = osxkeychain
